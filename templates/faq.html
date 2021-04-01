@@ -1,0 +1,195 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+  <div class="container">
+    <br>
+    <h2>Frequently Asked Questions </h2>
+    <p>
+    <div class="accordion" id="archivo-faq">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="about-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#about"
+            aria-expanded="false" aria-controls="about">
+            What is DBpedia Archivo?
+          </button>
+        </h2>
+        <div id="about" class="accordion-collapse collapse" aria-labelledby="about-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <p>
+              DBpedia Archivo is an online interface and augmented archive for all kinds of vocabularies. It
+              automatically crawls for new ontologies, updates the already enlisted ontologies regularly and performs
+              some useful tests to check the fitness of the vocabulary for the semantic web.
+
+              The ontologies and all additional data, are deployed on the <a title="DBpedia Databus"
+                href="https://databus.dbpedia.org/ontologies/">DBpedia Databus</a> for easy access, the webservice
+              provides some useful help for evaluation and usage. For a more specific explanation check out the <a
+                title="DBpedia Archivo Paper" href="https://svn.aksw.org/papers/2020/semantics_archivo/public.pdf"
+                target="_blank">DBpedia Archivo Paper</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="stars-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#stars"
+            aria-expanded="false" aria-controls="collapseOne">
+            What are the Archivo Stars?
+          </button>
+        </h2>
+        <div id="stars" class="accordion-collapse collapse" aria-labelledby="stars-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <p>Archivo provides a basic star-rating (not to be confused with the 5 stars of linked data) for FAIRer
+              ontologies.
+              Furthermore, Archivo allows to add more specialized and application-specific tests.
+              The baseline stars are explained on the <a href="/list">main page</a> and in more detail on the <a
+                href="/rating">rating page</a> including debugging help.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="uptime-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#uptime"
+            aria-expanded="false" aria-controls="uptime">
+            Does Archivo measure uptime of my ontology?
+          </button>
+        </h2>
+        <div id="uptime" class="accordion-collapse collapse" aria-labelledby="uptime-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <p>
+              No! Archivo checks all known ontologies every 8 hours. If a change is discovered, Archivo will update. If
+              the ontology is down, nothing is done. Users can fallback on Archivo to retrieve the latest available
+              version, if the ontology is down.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="access-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#access"
+            aria-expanded="false" aria-controls="access">
+            How can I access Archivo's ontologies?
+          </button>
+        </h2>
+        <div id="access" class="accordion-collapse collapse" aria-labelledby="access-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <p>
+              Generally ontologies on Archivo are accessible in all available formats in the <a href="/list">ontology
+                archive</a> as well as on the <a href="/info">ontology view</a>.
+              If you want to access a ontology in your program or download huge dumps of ontologies check out the <a
+                href="/api">API page</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="debugging-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#debugging"
+            aria-expanded="false" aria-controls="debugging">
+            How can I archive all four Archivo stars?
+          </button>
+        </h2>
+        <div id="debugging" class="accordion-collapse collapse" aria-labelledby="debugging-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <p>
+              On the <a href="/info">ontology view</a> the test results are accessible and generally a click/hover on a
+              <span class="x">✘</span> will show the problems with a failed test.<br>
+              The <a href="/rating">rating page</a> shows how to archieve four stars, what the limitations of the stars
+              are and how these can be improvd further.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="ontology-overview-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ontology-overview"
+            aria-expanded="false" aria-controls="ontology-overview">
+            Where can I find the test results for my ontology?
+          </button>
+        </h2>
+        <div id="ontology-overview" class="accordion-collapse collapse" aria-labelledby="ontology-overview-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <p>
+              The test-results of on ontology (and all it's versions) can be accessed at the <a href="/info">info</a>
+              page of the ontology.
+              <strong>Example:</strong>
+            <div class="codeblock">
+              <pre>http://archivo.dbpedia.org/info?o=http://datashapes.org/dash</pre>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="dev-stage-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#dev-stage"
+            aria-expanded="false" aria-controls="dev-stage">
+            What is a develop stage version?
+          </button>
+        </h2>
+        <div id="dev-stage" class="accordion-collapse collapse" aria-labelledby="dev-stage-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <h3>What is a develop stage version?</h3>
+            <p>
+              The develop stage version is an alternative URI (for example to a file on raw.github.com) which represents
+              the latest, not offically released version.
+              This feature should help debugging ontologies during development and grant consumers access to the latest
+              (even if unstable) version of the ontology.
+              An example can be seen at the <a href="/info?o=http://dbpedia.org/ontology/">DBpedia ontology</a>.
+            </p>
+            <h3>How can I add a develop stage version of my ontology to Archivo?</h3>
+            <p>A develop stage version can be added to Archivo by adding a triple in the form of
+            <pre><code>&ltNIR&gt &lthttps://archivo.dbpedia.org/trackThis&gt &ltURI of dev file&gt .</code></pre>
+            to your ontology with NIR being the non information URI of your ontology (the URI which represents your
+            ontology) and &ltURI of dev file&gt being an URI of a file (for example from raw.github.com).
+            </p>
+            <p>
+              The list of already enlisted development ontologies can be found <a href="/list?dev">here</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="compliance-checks-heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#compliance-checks"
+            aria-expanded="false" aria-controls="compliance-checks">
+            How can I add a compliance check to Archivo?
+          </button>
+        </h2>
+        <div id="compliance-checks" class="accordion-collapse collapse" aria-labelledby="compliance-checks-heading"
+          data-bs-parent="#archivo-faq">
+          <div class="accordion-body">
+            <h3>What is a compliance check?</h3>
+            <p>
+              Beyond the <a href="/faq#stars">Archivo stars</a> Archivo uses <a
+                href="https://www.w3.org/TR/shacl/">SHACL</a> to measure the quality of ontologies.
+              An example for such a test is the <a>LODE conformity test</a>, which checks the compatibility of a
+              vocabulary with the fully automatic <a href="https://essepuntato.it/lode/">LODE service</a>.
+            </p>
+            <h3>How can I contribute to the compliance checks?</h3>
+            <p>
+              Just create a pull request at <a
+                href="https://github.com/dbpedia/archivo/tree/master/shacl-library">Archivos
+                SHACL library</a> with your
+              SHACL test, we will review it and add it to Archivos workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p><b>Question missing?</b> Ask it at the <a href="https://forum.dbpedia.org/c/services/archivo/42">DBpedia
+        Forum</a>.</p>
+  </div>
+
+</section>
+
+{% endblock %}
