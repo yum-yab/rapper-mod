@@ -1,2 +1,2 @@
 # rapper-mod
-Databus Mod for parsing RDF with rapper to different formats.
+Databus Mod for serializing RDF with rapper as different formats.
